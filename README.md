@@ -3,27 +3,27 @@
 This slack simulator uses two programs.  One that creates a Graphical User Interface and is able to connect it to a server, and one that hosts the server that the GUI connects to.  The GUI utilizes sockets to connect to the hosted server, and inputs and outputs information using a BufferedReader object and a PrintWriter object.  To use the GUI, the user must first host a server.  To do this the command below must be entered...
 
 ```
-java GWackChannel PortNumber
+$ java GWackChannel PortNumber
 ```
 
 The PortNumber should be expressed as an integer.  A working example would be something like
 
 ```
-java GWackChannel 2021
+$ java GWackChannel 2021
 ```
 
 After this the user would launch the GUI with the command...
  
- ```
- java GWackClientGUI
- ```
+```
+$ java GWackClientGUI
+```
  
 The user will then enter a username for themself, the ip address (in this case assuming the server was hosted from the users own computer, they would use localhost) and the port number that they would like to connect to, then they would click connect.  A user list would appear on the left that will continuously be updated as users join and disconnect from the server, all messages sent since connection will appear in the messages box in the center, and the box on the bottom is editable and its contents will be sent as a message when the send button or the enter key are used.  On the bottom there is also a ComboBox to change the theme of the GUI which changes the color scheme, and a ComboBox that allows the user to select a status update which when changed will send an update to the server.  
 
 The Server can also be accessed from a terminal using netcat.  The process to do this on a mac is shown below...
 
 ```
-nc ipAddress port
+$ nc ipAddress port
 NAME
 username
 ```
@@ -31,7 +31,7 @@ username
 The command nc ipAddress port takes the ipAddress and the port number and inputs them in place of the labels above.  And the username is replaced by the users inputted username.  An example of what this would look like would be something like this...
 
 ```
-nc localhost 2021
+$ nc localhost 2021
 NAME
 joshrizika
 ```
